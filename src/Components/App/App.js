@@ -1,11 +1,15 @@
 import React from 'react';
-import randomColor from 'randomcolor';
 
+import Paint from '../Paint/Paint';
+import WindowSize from '../WindowSize/WindowSize';
 
 function App() {
+
   return (
-    <section className="App">
-      <h1>Hello</h1>
+    <section className="app">
+      <h1>Paint Board</h1>
+      <Paint />
+      <WindowSize />
     </section>
   );
 }
