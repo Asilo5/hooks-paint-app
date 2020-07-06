@@ -23,10 +23,3 @@ html {
     font-size: 0.5rem;
     margin-left: 10px;
   }
-  
-  .button-refresh-colors {
-    border: 0;
-    background: none;
-    cursor: pointer;
-    font-size: 2rem;
-  }
