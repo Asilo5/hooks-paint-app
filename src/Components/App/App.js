@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState, 
+                useEffect, 
+                useRef, 
+                useCallback, 
+                useMemo
+} from 'react';
 import randomColor from 'randomcolor';
 
 
 function App() {
+
   return (
     <section className="App">
-      <h1>Hello</h1>
+      <h1>Paint Board</h1>
+
     </section>
   );
 }
