@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import Name from './Name';
-// import ColorPicker from './ColorPicker';
+import Name from '../Name/Name';
+import ColorPicker from '../ColorPicker/ColorPicker';
 import randomColor from 'randomcolor';
 
 const Paint = () => {
@@ -25,11 +25,11 @@ const Paint = () => {
           <Name />
         </section>
         <section style={{ marginTop: 10 }}>
-          {/* <ColorPicker
+          <ColorPicker
             colors={colors}
             activeColor={activeColor}
             setActiveColor={setActiveColor}
-          /> */}
+          />
         </section>
       </header>
     )

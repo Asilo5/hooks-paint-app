@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import randomColor from 'randomcolor'
+import React from 'react';
 
 const ColorPicker = ({ colors = [], activeColor, setActiveColor }) => {
-  if (!colors.length) return null
+  if (!colors.length) return null;
+
   return (
     <fieldset className="color-picker">
       {colors.map((color, i) => (
@@ -19,4 +19,6 @@ const ColorPicker = ({ colors = [], activeColor, setActiveColor }) => {
       ))}
     </fieldset>
   )
-}
+};
+
+export default ColorPicker;

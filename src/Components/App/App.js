@@ -4,17 +4,15 @@ import React, { useState,
                 useCallback, 
                 useMemo
 } from 'react';
-import randomColor from 'randomcolor';
 
-import Name from '../Name/Name';
-
+import Paint from '../Paint/Paint';
 
 function App() {
 
   return (
     <section className="App">
       <h1>Paint Board</h1>
-      <Name />
+      <Paint />
     </section>
   );
 }
