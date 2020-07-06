@@ -14,23 +14,10 @@ html {
     margin: 0;
   }
   
-  header {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-bottom: 1px solid black;
-  }
-  
-  header > section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  
   .header-coords {
     user-select: none;
   }
+
   .coord-label {
     text-transform: uppercase;
     font-size: 0.5rem;

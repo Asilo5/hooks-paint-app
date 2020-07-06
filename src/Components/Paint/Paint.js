@@ -3,6 +3,8 @@ import Name from '../Name/Name';
 import ColorPicker from '../ColorPicker/ColorPicker';
 import randomColor from 'randomcolor';
 
+import './style.css';
+
 const Paint = () => {
 
     const [colors, setColors] = useState([]);
