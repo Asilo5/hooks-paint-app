@@ -6,7 +6,7 @@ import WindowSize from '../WindowSize/WindowSize';
 function App() {
 
   return (
-    <section className="App">
+    <section className="app">
       <h1>Paint Board</h1>
       <Paint />
       <WindowSize />
