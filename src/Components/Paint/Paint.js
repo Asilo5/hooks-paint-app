@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef } from 'react';
+import React, {useState, useEffect, useRef, useCallback } from 'react';
 import Name from '../Name/Name';
 import ColorPicker from '../ColorPicker/ColorPicker';
 import randomColor from 'randomcolor';
@@ -15,15 +15,16 @@ const Paint = () => {
 
     useEffect(() => getColors(), []);
 
-    const getColors = () => {
-      const baseColor = randomColor().slice(1);
-      fetch(`https://www.thecolorapi.com/scheme?hex=${baseColor}&mode=monochrome`)
-      .then(res => res.json())
-      .then(res => {
-        setColors(res.colors.map(color => color.hex.value))
-        setActiveColor(res.colors[0].hex.value)
-      })
-    }
+    const getColors = useCallback(() => {
+        const baseColor = randomColor().slice(1);
+        fetch(`https://www.thecolorapi.com/scheme?hex=${baseColor}&mode=monochrome`)
+        .then(res => res.json())
+        .then(res => {
+          setColors(res.colors.map(color => color.hex.value))
+          setActiveColor(res.colors[0].hex.value)
+        })
+    });
+
     return (
       <header ref={headerRef} style={{ borderTop: `10px solid ${activeColor}` }}>
         <section className="app">
@@ -36,7 +37,7 @@ const Paint = () => {
             setActiveColor={setActiveColor}
             height={window.innerHeight - headerRef.current.offsetHeight}
           />
-          <RefreshButton />
+          <RefreshButton cb={getColors}/>
         </section>
       </header>
     )

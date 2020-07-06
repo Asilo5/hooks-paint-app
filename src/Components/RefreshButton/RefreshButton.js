@@ -1,8 +1,6 @@
 import React from 'react';
 import './style.css';
 
-const RefreshButton = ({ cb }) => {
+export default React.memo = ({ cb }) => {
   return <button className="button-refresh-colors" onClick={cb}>&#8634;</button>
-} 
-
-export default RefreshButton;
+};
