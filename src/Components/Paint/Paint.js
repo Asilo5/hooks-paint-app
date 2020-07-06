@@ -4,6 +4,7 @@ import ColorPicker from '../ColorPicker/ColorPicker';
 import randomColor from 'randomcolor';
 
 import './style.css';
+import RefreshButton from '../RefreshButton/RefreshButton';
 
 const Paint = () => {
 
@@ -35,6 +36,7 @@ const Paint = () => {
             setActiveColor={setActiveColor}
             height={window.innerHeight - headerRef.current.offsetHeight}
           />
+          <RefreshButton />
         </section>
       </header>
     )
