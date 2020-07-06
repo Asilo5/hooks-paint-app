@@ -23,7 +23,7 @@ const Paint = () => {
           setColors(res.colors.map(color => color.hex.value))
           setActiveColor(res.colors[0].hex.value)
         })
-    });
+    }, []);
 
     return (
       <header ref={headerRef} style={{ borderTop: `10px solid ${activeColor}` }}>
