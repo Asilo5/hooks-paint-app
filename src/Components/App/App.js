@@ -6,6 +6,7 @@ import React, { useState,
 } from 'react';
 
 import Paint from '../Paint/Paint';
+import WindowSize from '../WindowSize/WindowSize';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <section className="App">
       <h1>Paint Board</h1>
       <Paint />
+      <WindowSize />
     </section>
   );
 }
