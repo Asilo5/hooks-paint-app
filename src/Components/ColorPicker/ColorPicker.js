@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 
 const ColorPicker = ({ colors = [], activeColor, setActiveColor }) => {
   if (!colors.length) return null;
